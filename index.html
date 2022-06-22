@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Мой сайт</title>
     <script src="js/particles.min.js"></script>
     <script>
@@ -21,7 +21,8 @@
   </head>
   <body>
     <div class="start">
-      <header class="d-flex header">
+      <div id="particles-js"></div>
+      <header class="d-flex header animation">
         <div class="fu">
           <div class="container-big headerContainer">
             <div class="container navContainer">
@@ -36,10 +37,85 @@
           </div>
         </div>
       </header>
-      <div class="about">
-        <h1>Программирование - это</h1>
+      <div class="about container animation">
+        <div class="quote">
+          <h1
+            >"<span class="underline">Программирование</span> — это не наука, а
+            ремесло."</h1
+          >
+          <h3 class="author">Ричард Столлман</h3>
+        </div>
       </div>
-      <div id="particles-js"></div>
+    </div>
+    <div class="container-big aboutMe animation">
+      <div>
+        <h1>Про меня</h1>
+        <p
+          >Меня зовут Константин. Я фанат
+          <span class="starWars">Звездных Войн</span>, котиков и
+          программирования.</p
+        >
+        <div class="container block">
+          <div class="card">
+            <img src="assets/htmlLogo.png" class="logoSteck" />
+            <div class="titleLogo">HTML</div>
+            <p
+              >HTML- стандартизированный язык разметки документов для просмотра
+              веб-страниц в браузере. Веб-браузеры получают HTML документ от
+              сервера по протоколам HTTP/HTTPS или открывают с локального диска,
+              далее</p
+            >
+          </div>
+          <div class="card">
+            <img src="assets/htmlLogo.png" class="logoSteck" />
+            <div class="titleLogo">HTML</div>
+            <p
+              >HTML- стандартизированный язык разметки документов для просмотра
+              веб-страниц в браузере. Веб-браузеры получают HTML документ от
+              сервера по протоколам HTTP/HTTPS или открывают с локального диска,
+              далее</p
+            >
+          </div>
+          <div class="card">
+            <img src="assets/htmlLogo.png" class="logoSteck" />
+            <div class="titleLogo">HTML</div>
+            <p
+              >HTML- стандартизированный язык разметки документов для просмотра
+              веб-страниц в браузере. Веб-браузеры получают HTML документ от
+              сервера по протоколам HTTP/HTTPS или открывают с локального диска,
+              далее</p
+            >
+          </div>
+          <div class="card">
+            <img src="assets/htmlLogo.png" class="logoSteck" />
+            <div class="titleLogo">HTML</div>
+            <p
+              >HTML- стандартизированный язык разметки документов для просмотра
+              веб-страниц в браузере. Веб-браузеры получают HTML документ от
+              сервера по протоколам HTTP/HTTPS или открывают с локального диска,
+              далее</p
+            >
+          </div>
+          <div class="card">
+            <img src="assets/htmlLogo.png" class="logoSteck" />
+            <div class="titleLogo">HTML</div>
+            <p
+              >HTML- стандартизированный язык разметки документов для просмотра
+              веб-страниц в браузере. Веб-браузеры получают HTML документ от
+              сервера по протоколам HTTP/HTTPS или открывают с локального диска,
+              далее</p
+            >
+          </div>
+        </div>
+      </div>
+      <div id="gallery">
+        <div class="galleryContainer">
+          <a href="#"><img src="imgs/1.jpg"/></a>
+        </div>
+        <div class="galleryContainer">
+          <a href="#"><img src="imgs/1.jpg"/></a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
