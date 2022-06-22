@@ -110,15 +110,15 @@
       </div>
       <div class="gallery">
         <div class="galleryContainer">
-          <a href="#"><img src="imgs/1.jpg"/></a>
+          <a href="#1" onclick="show(this.id)" id="1"><img src="imgs/1.jpg"/></a>
         </div>
         <div class="galleryContainer">
-          <a href="#"><img src="imgs/1.jpg"/></a>
+          <a onclick="show(this.id)" id="2"><img src="imgs/2.jpg"/></a>
         </div>
         <div class="galleryContainer">
-          <a href="#"><img src="imgs/1.jpg"/></a>
+          <a onclick="show(this.id)" id="3"><img src="imgs/3.jpg"/></a>
         </div>
-        <div class="original d-flex" id="original" >
+        <div class="original" id="original" >
           <div class="originalBlock d-flex">
             
             <div>
@@ -126,16 +126,16 @@
                   <div class="views" onclick="closeContainer()">
                       <div class="close" onclick="closeContainer()"></div>
                   </div>
-                  <div>
+                  <div id="imgContainer">
                     <div class="arrowContainer d-flex">
                       <p><i class="arrow left"></i></p>
                       <p><i class="arrow right"></i></p>
                     </div>
                   </div>
-                  <img class="originalImage" src="imgs/1.jpg">
               </div>
             </div>
           </div>
     </div>
+    <script src="js/slider.js"></script>
   </body>
 </html>
