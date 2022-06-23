@@ -374,7 +374,7 @@ i:hover {
   left: 0;
   position: absolute;
   width: 100%;
-  background-image: url(../assets/blacHole.jpg);
+  background-image: url(../assets/blackHole.jpg);
   background-size: 100% 100%;
   min-height: 500px;
 
@@ -392,4 +392,7 @@ i:hover {
 .absolute{
   z-index: 1;
   position: absolute;
+}
+.contactFlex{
+  justify-content: space-around;
 }
