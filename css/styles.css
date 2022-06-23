@@ -349,8 +349,9 @@ i:hover {
   font-size: 155%;
 }
 .description{
+  font-weight: 300;
   padding-left: 0,5%;
-  font-size: 80%;
+  font-size: 75%;
 }
 
 .phpPrice{
