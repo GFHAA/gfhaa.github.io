@@ -220,6 +220,9 @@ canvas {
   text-align: start;
 }
 
+.small{
+  font-size: 90%;
+}
 /* галерея */
 
 .gallery {
@@ -330,5 +333,39 @@ i:hover {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
+/* стрелки конец */
 
-/* конец кнопок */
+/* прейскурант */
+.pricesLiBlock{
+  word-wrap: break-word;
+}
+.titlePrice{
+  position: relative;
+  margin-bottom: 0;
+
+}
+.namePrice{
+  font-size: 155%;
+}
+.description{
+  padding-left: 0,5%;
+  font-size: 80%;
+}
+.price{
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+.phpPrice{
+ background-color: #777bb3;
+ color: #000;
+ padding: 0 10px 0 10px;
+ border-radius: 50%; 
+ font-weight: 900;
+}
+.jsPrice{
+  background: #f7df1e;
+  color: #000;
+  font-weight: 900;
+  padding: 0 5px 0 5px ;
+}
