@@ -117,7 +117,7 @@ canvas {
 
 .header {
   position: absolute;
-  /* width: 100%; */
+  width: 100%;
   min-height: 100px;
   justify-content: end;
   background-color: rgba(32, 32, 32, 0.5);
