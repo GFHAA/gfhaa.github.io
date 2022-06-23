@@ -340,7 +340,8 @@ i:hover {
   word-wrap: break-word;
 }
 .titlePrice{
-  position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
 
 }
@@ -351,11 +352,7 @@ i:hover {
   padding-left: 0,5%;
   font-size: 80%;
 }
-.price{
-  position: absolute;
-  bottom: 0;
-  right: 2%;
-}
+
 .phpPrice{
  background-color: #777bb3;
  color: #000;
