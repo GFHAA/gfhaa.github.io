@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/styles.css" />
     <title>Мой сайт</title>
     <script src="js/particles.min.js"></script>
@@ -110,32 +111,24 @@
       </div>
       <div class="gallery">
         <div class="galleryContainer">
-          <a href="#1" onclick="show(this.id)" id="1"><img src="imgs/1.jpg"/></a>
+          <a href="imgs/1.jpg" data-lightbox="cats"><img src="imgs/1.jpg" /></a>
         </div>
         <div class="galleryContainer">
-          <a onclick="show(this.id)" id="2"><img src="imgs/2.jpg"/></a>
+          <a href="imgs/2.jpg" data-lightbox="cats" ><img src="imgs/2.jpg" /></a>
         </div>
         <div class="galleryContainer">
-          <a onclick="show(this.id)" id="3"><img src="imgs/3.jpg"/></a>
+          <a href="imgs/3.jpg" data-lightbox="cats"><img src="imgs/3.jpg" /></a>
         </div>
-        <div class="original" id="original" >
-          <div class="originalBlock d-flex">
-            
-            <div>
-              <div class="originalContainer">
-                  <div class="views" onclick="closeContainer()">
-                      <div class="close" onclick="closeContainer()"></div>
-                  </div>
-                  <div id="imgContainer">
-                    <div class="arrowContainer d-flex">
-                      <p><i class="arrow left"></i></p>
-                      <p><i class="arrow right"></i></p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <script src="js/slider.js"></script>
+    <!-- <script src="js/slider.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/lightbox.js"></script>
+    <script>
+      lightbox.option({
+        'wrapAround': true,
+        'alwaysShowNavOnTouchDevices': true,
+        'disableScrolling': true,
+        'alwaysShowNavOnTouchDevices': true
+      })
+  </script>
   </body>
 </html>
