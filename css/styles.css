@@ -60,7 +60,9 @@ a {
   .container {
     max-width: 540px;
   }
-
+  .navContainer{
+    width: 40%;
+  }
   .navContainer {
     float: right;
   }
