@@ -46,7 +46,7 @@ a {
 }
 
 .container-big {
-  width: 90vw !important;
+  width: 80vw !important;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -145,7 +145,7 @@ canvas {
   transform: translate(0, -50%);
   /* position: absolute; */
   display: inline-block;
-  width: 80vw !important;
+  width: 95vw !important;
 }
 
 
