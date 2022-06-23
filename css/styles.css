@@ -97,9 +97,10 @@ a {
     width: 240px!important;
   }
   .fu{
-    margin-right: 3%;
+    margin: 0;
   }
 }
+
 
 .d-flex {
   display: flex !important;
@@ -125,7 +126,9 @@ canvas {
   justify-content: end;
   background-color: rgba(32, 32, 32, 0.5);
 }
-
+.fu{
+  margin-right: 3%;
+}
 .start {
   width: 100%;
   height: 60vh;
