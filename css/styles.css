@@ -187,9 +187,6 @@ canvas {
   font-family: "Star wars";
 }
 
-.information {
-  text-align: left;
-}
 
 .block {
   display: flex;
