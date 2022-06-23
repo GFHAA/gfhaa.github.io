@@ -93,6 +93,9 @@ a {
   .information {
     text-align: center !important;
   }
+  .galleryContainer {
+    width: 240px!important;
+  }
 }
 
 .d-flex {
@@ -206,7 +209,7 @@ canvas {
 
 .galleryContainer {
   max-height: 300px;
-  width: 240px;
+  width: 80%;
   margin-top: 1%;
   padding: 3px;
   position: relative;
