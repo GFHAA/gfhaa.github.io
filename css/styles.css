@@ -218,6 +218,8 @@ canvas {
 
 .logoSteck {
   height: 35%;
+  min-width: 43%;
+  max-width: 70%;
 }
 
 .card p {
