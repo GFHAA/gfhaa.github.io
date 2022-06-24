@@ -90,6 +90,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .ContactBlock {
+    background-size: auto 100%;
+  }
   .container {
     max-width: 720px;
   }
@@ -395,8 +398,8 @@ i:hover {
   margin-top: 5%;
   background-image: url(../assets/blackHole.jpg);
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   min-height: 500px;
-
 }
 
 .contactsRight {
