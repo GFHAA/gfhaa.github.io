@@ -8,6 +8,42 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+      ym(89310109, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript>
+      <div
+        ><img
+          src="https://mc.yandex.ru/watch/89310109"
+          style="position: absolute; left: -9999px"
+          alt=""
+      /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
     <div class="container">
       <form class="mainForm itemContainer">
         <form class="form1">
@@ -16,7 +52,8 @@
               <h2 class="h2 tarrifh2">Выберите тип мойки</h2>
               <div class="SelectBox">
                 <span class="SelectSpan">
-                  <input checked
+                  <input
+                    checked
                     type="radio"
                     id="standart"
                     class="checker"
@@ -59,8 +96,15 @@
           <div class="elementForm">
             <div class="center">
               <h2 class="h2 tarrifh2">Абонемент</h2>
-              <div >
-                <input type="range" max="20" min="1" value="1" class="days" id="washTime"/>
+              <div>
+                <input
+                  type="range"
+                  max="20"
+                  min="1"
+                  value="1"
+                  class="days"
+                  id="washTime"
+                />
                 <span class="output">0 моек</span>
                 <p class="sale">Ваша скидка: <span id="sale">0%</span></p>
               </div>
@@ -113,7 +157,9 @@
             <h2>Ваш заказ</h2>
             <p class="pTotal">Тариф: <span id="totalTarif">0₽</span></p>
             <p class="pTotal">Моек: <span id="totalTimes">1</span></p>
-            <p class="pTotal">Дополнительные опции: <span id="totalOptions">0₽</span></p>
+            <p class="pTotal"
+              >Дополнительные опции: <span id="totalOptions">0₽</span></p
+            >
             <p class="pTotal">Цена без скидки: <span id="price">500₽</span></p>
             <p class="pTotal">Скидка: <span id="totalSale">0₽</span></p>
             <p class="TotalPrice">ИТОГО: <span id="TotalPrice">500₽</span></p>
