@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="mainForm itemContainer">
+        <form class="form1">
+          <div class="elementForm">
+            <div class="center">
+              <h2 class="h2 tarrifh2">Выберите тип мойки</h2>
+              <div class="SelectBox">
+                <span class="SelectSpan">
+                  <input checked
+                    type="radio"
+                    id="standart"
+                    class="checker"
+                    name="tarrif"
+                  />
+                  <label class="radio" for="standart">Стандарт</label>
+                </span>
+                <span class="SelectSpan">
+                  <input
+                    type="radio"
+                    id="express"
+                    class="checker"
+                    name="tarrif"
+                  />
+                  <label class="radio" for="express">Экспресс</label>
+                </span>
+                <span class="SelectSpan">
+                  <input
+                    type="radio"
+                    id="water"
+                    class="checker"
+                    name="tarrif"
+                  />
+                  <label class="radio" for="water">Промыть водичкой</label>
+                </span>
+                <span class="SelectSpan">
+                  <input
+                    type="radio"
+                    id="goodWash"
+                    class="checker"
+                    name="tarrif"
+                  />
+                  <label class="radio" for="goodWash"
+                    >Тщательная промывка</label
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="elementForm">
+            <div class="center">
+              <h2 class="h2 tarrifh2">Абонемент</h2>
+              <div >
+                <input type="range" max="20" min="1" value="1" class="days" id="washTime"/>
+                <span class="output">0 моек</span>
+                <p class="sale">Ваша скидка: <span id="sale">0%</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="elementForm">
+            <div class="center">
+              <h2 class="h2 tarrifh2">Дополнительные опции</h2>
+              <div>
+                <div class="optionDiv">
+                  <input
+                    type="checkbox"
+                    id="smell"
+                    class="checker checkerOptions"
+                  />
+                  <label for="smell" class="checkmark"></label>
+                  <label for="smell" class="optionText"
+                    >Освежитель "Ельник" (+50&#8381;)</label
+                  >
+                </div>
+                <div class="optionDiv">
+                  <input
+                    type="checkbox"
+                    id="mat"
+                    class="checker checkerOptions"
+                  />
+                  <label for="mat" class="checkmark"></label>
+                  <label for="mat" class="optionText"
+                    >Мойка ковриков (+100&#8381;)</label
+                  >
+                </div>
+                <div class="optionDiv">
+                  <input
+                    type="checkbox"
+                    id="mat"
+                    class="checker checkerOptions"
+                  />
+                  <label for="mat" class="checkmark"></label>
+                  <label for="mat" class="optionText"
+                    >Покрытие "Анти-грязь" (+140&#8381;)</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <form class="form2 itemContainer elementForm total">
+          <div>
+            <h2>Ваш заказ</h2>
+            <p class="pTotal">Тариф: <span id="totalTarif">0₽</span></p>
+            <p class="pTotal">Моек: <span id="totalTimes">1</span></p>
+            <p class="pTotal">Дополнительные опции: <span id="totalOptions">0₽</span></p>
+            <p class="pTotal">Цена без скидки: <span id="price">500₽</span></p>
+            <p class="pTotal">Скидка: <span id="totalSale">0₽</span></p>
+            <p class="TotalPrice">ИТОГО: <span id="TotalPrice">500₽</span></p>
+          </div>
+        </form>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

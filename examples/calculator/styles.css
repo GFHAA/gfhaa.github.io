@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+@media (min-width: 576px) {
+    .container{
+        width: 60%!important;
+    }
+    .mainForm{
+        margin-right: 100px;
+    }
+}
+@media (max-width: 576px) {
+    form{
+        width: 100%;
+    }
+   
+}
+.mainForm{
+    flex: 1;
+}
+.container{
+    width: 95vw;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.checker{
+    display: none;
+}
+.SelectBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.radio:not(:first-child){
+    margin-left: -2px;
+}
+.radio{
+    display: flex;
+    flex: calc(50% - 20px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 40px;
+    font-size: 20px;
+    margin: 0 10px 15px;
+    border: 2px solid #00c684;
+    padding: 10px;
+    cursor: pointer;
+}
+.radio:hover{
+    background-color: rgba(0, 198, 132, 0.5);
+}
+.checker:checked + .radio{
+    color: #fff;
+    background-color: #00c684;
+}
+.tarrifh2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.elementForm{
+    margin-top: 50px;
+}
+.SelectSpan{
+    width: 50%;
+}
+.days{
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    background-color: #eee;
+    border-radius: 20px;
+    outline: none;
+}
+.days::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.output{
+    font-size: 30px;
+    margin-left: 30px;
+    color: #282b31;
+}
+.sale{
+    font-size: 30px;    
+    color: #282b31;
+}
+
+
+
+.optionDiv{
+    display: flex;
+    align-items: center;
+    font: inherit;
+}
+.optionDiv:not(:first-child){
+    margin-top: 5px;
+}
+.checkmark {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.checkmark::after{
+    opacity: 0;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+}
+.checkerOptions:checked + .checkmark::after{
+    opacity: 1;
+}
+.optionText{
+    font-size: 130%;
+}
+
+
+.pTotal{
+    font-size: 150%;
+
+}
+.TotalPrice{
+    font-size: 200%;
+    font-weight: 900;
+}
