@@ -21,6 +21,9 @@ body{
 .mainForm{
     flex: 1;
 }
+.form2{
+    flex: 0.5;
+}
 .container{
     width: 95vw;
     margin: auto;
