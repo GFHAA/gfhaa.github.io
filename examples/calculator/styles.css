@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,500&display=swap');
 body{
+    height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 @media (min-width: 576px) {
     .container{
@@ -147,4 +151,23 @@ body{
 .TotalPrice{
     font-size: 200%;
     font-weight: 900;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #282b31;
+}
+.footer{
+    margin-top: 5%;
+    padding: 2%;
+    box-shadow: 0 15px 30px 10px rgba(0, 0, 0, .5);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+.wrapper{
+    flex: 1 0 auto;
 }
