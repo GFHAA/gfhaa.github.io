@@ -21,6 +21,8 @@
       console.log("callback - particles.js config loaded");
     });
   </script>
+  <script src="js/jsonParsing.js">
+  </script>
 </head>
 
 <body>
@@ -68,12 +70,8 @@
       </div>
     </header>
     <div class="about container animation">
-
-      <h1>"<span class="underline">Программирование</span> — это не наука, а
-            ремесло."</h1
-          >
-          <h3 class="author">Ричард Столлман</h3>
-     
+      <h1 id="textQuote"></h1>
+      <h3 class="author" id="authorQuote"></h3>
       </div>
     </div>
     <div class="container-big aboutMe animation">
@@ -209,6 +207,10 @@
   <!-- <script src="js/slider.js"></script> -->
   <script src="js/lightbox-plus-jquery.js"></script>
   <script>
+    parser.getFile("quotes.json", function(data){
+      document.querySelector("#textQuote").innerHTML = '"' + data.text + '"'; 
+      document.querySelector("#authorQuote").innerHTML = data.author; 
+    })
     lightbox.option({
       'disableScrolling': true,
       'wrapAround': true,
