@@ -42,8 +42,8 @@ let snows = {
         for(let i = 0; i < snows.snowCount; i++){
             snows.snowsPositions[i].y += getRandomInt(1,2);
             // snows.snowsPositions[i].x += getRandomInt(-1,2);
-            if(snows.snowsPositions[i].y > height+snows.snowsPositions[i].r + 5){
-                snows.snowsPositions[i].y = 0
+            if(snows.snowsPositions[i].y > height+snows.snowsPositions[i].r*2+1){
+                snows.snowsPositions[i].y = 0-snows.snowsPositions[i].r;
             }
         }
         snows.drawSnow()
