@@ -52,7 +52,7 @@ let snows = {
                 snows.snowsPositions[i].x = 0 - snows.snowsPositions[i].r;
             }
             if (snows.snowsPositions[i].x < 0-snows.snowsPositions[i].r ) {
-                snows.snowsPositions[i].x = width - snows.snowsPositions[i].r;
+                snows.snowsPositions[i].x = width + snows.snowsPositions[i].r;
             }
         }
         snows.drawSnow()
