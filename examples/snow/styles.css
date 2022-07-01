@@ -47,6 +47,7 @@ a{
     color: #000;
 }
 .wrapper{
+    height: 100vh;
     position: relative;
     flex: 1 0 auto;
 }
