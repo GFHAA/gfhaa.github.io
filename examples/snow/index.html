@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
-      ym(89310109, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-      });
-    </script>
-    <noscript>
-      <div
-        ><img
-          src="https://mc.yandex.ru/watch/89310109"
-          style="position: absolute; left: -9999px"
-          alt=""
-      /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    <div class="wrapper">
-      <div class="content">
-        <canvas> </canvas>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(
+      window,
+      document,
+      "script",
+      "https://mc.yandex.ru/metrika/tag.js",
+      "ym"
+    );
+    ym(89310109, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/89310109" style="position: absolute; left: -9999px" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+  <div class="wrapper">
+    <div class="content">
+      <canvas> </canvas>
     </div>
-    <footer class="footer"><a href="https://gfhaa.github.io/">На главную</a></footer>
-    <script src="app.js"></script>
-  </body>
+    <div class="menu">
+      <h3>Измените параметры</h3>
+      <form>
+        <p>Скорость падения вниз</p>
+        <div class="speedController">
+          <input type="range" max="30" min="1" value="2" id="speedFall" class="inputRange"/>
+          <input type="text" id="speedFallInt" value="2" class="inputInt">
+        </div>
+        <p>Скорость падения вниз</p>
+        <div class="speedController">
+          <input type="range" max="20" min="-20" value="2" id="speedFallX" class="inputRange"/>
+          <input type="text" id="speedFallIntX" value="2" class="inputInt">
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer class="footer"><a href="https://gfhaa.github.io/">На главную</a></footer>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+</body>
+
 </html>

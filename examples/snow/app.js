@@ -14,8 +14,11 @@ function getRandomInt(min, max) {
 }
 
 let snows = {
+    frames: 3,
+    speedFall: 2,
     snowCount: getRandomInt(50, 150),
     snowsPositions: [],
+    speedX: 0,
     createSnows() {
         for (let i = 0; i < this.snowCount; i++) {
             snows.snowsPositions.push({
@@ -38,12 +41,18 @@ let snows = {
         ctx.closePath();
 
     },
-    fallSnow(){
-        for(let i = 0; i < snows.snowCount; i++){
-            snows.snowsPositions[i].y += getRandomInt(1,2);
-            // snows.snowsPositions[i].x += getRandomInt(-1,2);
-            if(snows.snowsPositions[i].y > height+snows.snowsPositions[i].r*2+1){
-                snows.snowsPositions[i].y = 0-snows.snowsPositions[i].r;
+    fallSnow() {
+        for (let i = 0; i < snows.snowCount; i++) {
+            snows.snowsPositions[i].y += snows.speedFall;
+            snows.snowsPositions[i].x += snows.speedX;
+            if (snows.snowsPositions[i].y > height + snows.snowsPositions[i].r * 2 + 1) {
+                snows.snowsPositions[i].y = 0 - snows.snowsPositions[i].r;
+            }
+            if (snows.snowsPositions[i].x > width + snows.snowsPositions[i].r * 2 + 1) {
+                snows.snowsPositions[i].x = 0 - snows.snowsPositions[i].r;
+            }
+            if (snows.snowsPositions[i].x < 0-snows.snowsPositions[i].r ) {
+                snows.snowsPositions[i].x = width - snows.snowsPositions[i].r;
             }
         }
         snows.drawSnow()
@@ -51,4 +60,4 @@ let snows = {
 }
 snows.createSnows()
 snows.drawSnow()
-setInterval(snows.fallSnow, 50)
+setInterval(snows.fallSnow, snows.frames * 10)
