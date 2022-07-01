@@ -379,6 +379,9 @@ i:hover {
 }
 
 /* Контакты */
+.wl{
+  border-radius: 10%;
+}
 .contacts {
   /* position: relative; */
   border-radius: 1%;
