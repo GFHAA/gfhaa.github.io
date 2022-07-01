@@ -14,7 +14,7 @@ body {
 
 @media (max-width: 576px) {
     .menu {
-        width: 80%;
+        width: 80%!important;
     }
 
 }
