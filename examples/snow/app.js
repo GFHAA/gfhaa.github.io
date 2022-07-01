@@ -18,7 +18,7 @@ let snows = {
     speedFall: 2,
     snowCount: getRandomInt(50, 150),
     snowsPositions: [],
-    speedX: 0,
+    speedX: 2,
     createSnows() {
         for (let i = 0; i < this.snowCount; i++) {
             snows.snowsPositions.push({
