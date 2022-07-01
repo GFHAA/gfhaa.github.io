@@ -1,100 +1,54 @@
-const typeWashTotal = document.querySelector("#totalTarif");
-const totalTimes = document.querySelector("#totalTimes");
-const totalOptions = document.querySelector("#totalOptions");
-const TotalPrice = document.querySelector("#price");
-const totalSale = document.querySelector("#totalSale")
-const TotalPriceSale = document.querySelector("#TotalPrice");
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
-const washRange = document.querySelector("#washTime")
-const saleSpan = document.querySelector("#sale")
-const output = document.querySelector(".output");
+const width = canvas.offsetWidth;
+const height = canvas.offsetHeight;
 
-const typeWash = Array.from(document.querySelectorAll("input[name = tarrif]"));
+console.log()
+canvas.width = width;
+canvas.height = height;
 
-typeWash.forEach(el => {
-    el.addEventListener('click', function (e) {
-        currentSet.typeWash = e.target.id;
-        updatePrice()
-    })
-});
 
-washRange.addEventListener("input", function (e) {
-    currentSet.washTime = Number(washRange.value);
-    saleSpan.innerHTML = currentSet.getSale() * 100 + "%";
-    output.innerHTML = currentSet.washTime + " моек";
-    updatePrice();
-})
-
-const checkers = Array.from(document.querySelectorAll(".checkerOptions"));
-
-checkers.forEach(el => {
-    el.addEventListener("change", function (e) {
-        e.stopPropagation;
-        if(e.target.checked){
-            currentSet.options.push(e.target.id);
-            updatePrice();
-        }else{
-            currentSet.options.splice(currentSet.options.indexOf(e.target.id), 1);
-            updatePrice();
-        }
-    })
-})
-
-function updatePrice() {
-    let priceType = currentSet.getTypeWashPrice();
-    let sale = currentSet.getSale();
-    let optionPrice = currentSet.getOptionPrice();
-    let totalPrice = (priceType + optionPrice) * (1 - sale) * currentSet.washTime;
-    totalOptions.innerHTML = currentSet.getOptionPrice() + '₽';
-    typeWashTotal.innerHTML = currentSet.getTypeWashPrice()  + '₽';
-    totalTimes.innerHTML = currentSet.washTime;
-    TotalPrice.innerHTML = (priceType + optionPrice) * currentSet.washTime + '₽';
-    totalSale.innerHTML = (priceType + optionPrice) * currentSet.washTime - totalPrice + '₽';
-    TotalPriceSale.innerHTML = totalPrice + '₽';
-
-    return totalPrice;
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
-const price = {
-    typeWash: {
-        standart: 500,
-        express: 350,
-        water: 230,
-        goodWash: 700
+let snows = {
+    snowCount: getRandomInt(50, 150),
+    snowsPositions: [],
+    createSnows() {
+        for (let i = 0; i < this.snowCount; i++) {
+            snows.snowsPositions.push({
+                x: getRandomInt(0, width),
+                y: getRandomInt(0, height),
+                r: getRandomInt(1, 20)
+            })
+        }
     },
-    option: {
-        option1: 50,
-        option2: 100,
-        option3: 140
+    drawSnow() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        for (let i = 0; i < snows.snowCount; i++) {
+            let cur = snows.snowsPositions[i];
+            ctx.moveTo(cur.x, cur.y);
+            ctx.arc(cur.x, cur.y, cur.r, 0, 2 * Math.PI);
+        }
+        ctx.fill();
+        ctx.closePath();
+
+    },
+    fallSnow(){
+        for(let i = 0; i < snows.snowCount; i++){
+            snows.snowsPositions[i].y += getRandomInt(1,2);
+            // snows.snowsPositions[i].x += getRandomInt(-1,2);
+            if(snows.snowsPositions[i].y > height+snows.snowsPositions[i].r + 5){
+                snows.snowsPositions[i].y = 0
+            }
+        }
+        snows.drawSnow()
     }
 }
-let currentSet = {
-    typeWash: "standart",
-    options: [],
-    washTime: 1,
-    getTypeWashPrice() {
-        return price.typeWash[this.typeWash]
-    },
-    getOptionPrice() {
-        let priceOption = 0;
-        if (this.options.length > 0) {
-            this.options.forEach(el => {
-                priceOption += price.option[el]
-            });
-        }
-        return priceOption;
-    },
-    getSale() {
-        let sale = 0;
-        if (this.washTime > 2 && this.washTime <= 6) {
-            sale = 0.05
-        } else if (this.washTime > 6 && this.washTime <= 13) {
-            sale = 0.1
-        } else if (this.washTime > 13 && this.washTime < 19) {
-            sale = 0.15
-        } else if (this.washTime >= 10) {
-            sale = 0.20
-        }
-        return sale;
-    }
-}
+snows.createSnows()
+snows.drawSnow()
+setInterval(snows.fallSnow, 50)
